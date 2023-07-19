@@ -1,8 +1,9 @@
 #!/bin/bash
-filename=$(find ./catalog/ -name $file*)
-# directory_name=$(find ./catalog/ -name $file)
-# echo "$directory_name"
+
+filename=$(find ./catalog/ -name $file_or_directory*)
+
 if [ -f $filename ]; then
+
     if basename $filename > /dev/null 2>&1 
     then
         rm $filename
@@ -10,6 +11,7 @@ if [ -f $filename ]; then
     else 
         echo "Неправильное название файла или директории"
     fi
+
 elif [ -d $filename ]; then
 rm -R $filename
 echo "ok"
