@@ -8,7 +8,7 @@ search: # find given text in directory tree
 show: # show file information
 	@./scripts/show_information.sh $(file)
 
-delete: # delete file or directory
+delete: # delete file or directory or directory
 	@./scripts/delete.sh $(file)
 
 help: ## show help list
